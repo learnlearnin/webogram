@@ -48,14 +48,14 @@ config(['$locationProvider', '$routeProvider', '$compileProvider', function($loc
   $.emojiarea.icons = icons;
   $.emojiarea.reverseIcons = reverseIcons;
 
-  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|filesystem|chrome-extension):|data:image\//);
-  $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|file|mailto|blob|filesystem|chrome-extension):|data:image\//);
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|filesystem|chrome-extension|app):|data:image\//);
+  $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|file|mailto|blob|filesystem|chrome-extension|app):|data:image\//);
 
 
   // $locationProvider.html5Mode(true);
   $routeProvider.when('/', {templateUrl: 'partials/welcome.html?2', controller: 'AppWelcomeController'});
   $routeProvider.when('/login', {templateUrl: 'partials/login.html?3', controller: 'AppLoginController'});
-  $routeProvider.when('/im', {templateUrl: 'partials/im.html?7', controller: 'AppIMController', reloadOnSearch: false});
+  $routeProvider.when('/im', {templateUrl: 'partials/im.html?8', controller: 'AppIMController', reloadOnSearch: false});
   $routeProvider.otherwise({redirectTo: '/'});
 
 }]);
