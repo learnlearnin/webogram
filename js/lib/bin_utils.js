@@ -1,5 +1,5 @@
 /*!
- * Webogram v0.3.5 - messaging web application for MTProto
+ * Webogram v0.4.2 - messaging web application for MTProto
  * https://github.com/zhukov/webogram
  * Copyright (C) 2014 Igor Zhukov <igor.beatle@gmail.com>
  * https://github.com/zhukov/webogram/blob/master/LICENSE
@@ -90,6 +90,52 @@ function uint6ToBase64 (nUint6) {
           : nUint6 === 63
             ? 47
             : 65;
+}
+
+function base64ToBlob(base64str, mimeType) {
+  var sliceSize = 1024;
+  var byteCharacters = atob(base64str);
+  var bytesLength = byteCharacters.length;
+  var slicesCount = Math.ceil(bytesLength / sliceSize);
+  var byteArrays = new Array(slicesCount);
+
+  for (var sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
+    var begin = sliceIndex * sliceSize;
+    var end = Math.min(begin + sliceSize, bytesLength);
+
+    var bytes = new Array(end - begin);
+    for (var offset = begin, i = 0 ; offset < end; ++i, ++offset) {
+      bytes[i] = byteCharacters[offset].charCodeAt(0);
+    }
+    byteArrays[sliceIndex] = new Uint8Array(bytes);
+  }
+
+  return blobConstruct(byteArrays, mimeType);
+}
+
+function dataUrlToBlob(url) {
+  // var name = 'b64blob ' + url.length;
+  // console.time(name);
+  var urlParts = url.split(',');
+  var base64str = urlParts[1];
+  var mimeType = urlParts[0].split(':')[1].split(';')[0];
+  var blob = base64ToBlob(base64str, mimeType);
+  // console.timeEnd(name);
+  return blob;
+}
+
+function blobConstruct (blobParts, mimeType) {
+  var blob;
+  try {
+    blob = new Blob(blobParts, {type: mimeType});
+  } catch (e) {
+    var bb = new BlobBuilder;
+    angular.forEach(blobParts, function(blobPart) {
+      bb.append(blobPart);
+    });
+    blob = bb.getBlob(mimeType);
+  }
+  return blob;
 }
 
 function bytesCmp (bytes1, bytes2) {
