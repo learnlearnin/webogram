@@ -50,6 +50,7 @@ Config.I18n = {
   locale: 'en-us',
   supported: [
     "en-us"
+    ,"en-pi"
     ,"es-es"
     ,"de-de"
     ,"it-it"
@@ -59,6 +60,7 @@ Config.I18n = {
   ], // To be copied to package.json
   languages: {
     'en-us': 'English',
+    'en-pi': 'Pirate Talk',
     'de-de': 'Deutsch',
     'es-es': 'Español',
     'it-it': 'Italiano',
