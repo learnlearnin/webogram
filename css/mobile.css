@@ -1,3 +1,7 @@
+/* Thanks to @brandonb927
+   https://gist.github.com/brandonb927/3874012
+
+   Prepending 'only screen and ' to each media query breaks nested media queries */
 /* app mobile css */
 html {
   background: #fff;
@@ -155,11 +159,13 @@ html {
   display: inline-block;
   width: 21px;
   height: 21px;
-  background: url(../img/icons/MobileIcons_2x.png) 0 0 no-repeat;
-  background-size: 21px 52px;
+  background-image: url(../img/icons/MobileIcons.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
-.is_1x .icon-search {
-  background-image: url(../img/icons/MobileIcons_1x.png);
+.is_2x .icon-search {
+  background-image: url(../img/icons/MobileIcons_2x.png);
+  background-size: 21px 52px;
 }
 .tg_page_head .navbar_peer_not_selected .navbar-search-wrap,
 .tg_modal_head .navbar-search-wrap {
@@ -182,12 +188,14 @@ html {
   width: 11px;
   height: 19px;
   vertical-align: text-top;
-  background: url(../img/icons/IconsetW.png) -15px -835px no-repeat;
-  background-size: 42px 1171px;
   opacity: 0.8;
+  background-image: url(../img/icons/IconsetW.png);
+  background-repeat: no-repeat;
+  background-position: -15px -835px;
 }
-.is_1x .icon-back {
-  background-image: url(../img/icons/IconsetW_1x.png);
+.is_2x .icon-back {
+  background-image: url(../img/icons/IconsetW_2x.png);
+  background-size: 42px 1171px;
 }
 .tg_page_head .navbar-quick-nav a:active .icon-back {
   opacity: 1;
@@ -674,15 +682,10 @@ a.im_message_from_photo {
   margin-top: 6px;
   background: none;
 }
-.is_1x .im_message_out .icon-message-status-tick {
-  background: none;
-}
-.im_message_unread .icon-message-status-tick,
-.is_1x .im_message_unread .icon-message-status-tick {
+.im_message_unread .icon-message-status-tick {
   background: #43A4DB;
 }
-.im_message_pending .icon-message-status-tick,
-.is_1x .im_message_pending .icon-message-status-tick {
+.im_message_pending .icon-message-status-tick {
   background: #9fd2ee;
 }
 .im_dialogs_search_field,
@@ -994,25 +997,32 @@ a.mobile_modal_action .tg_checkbox_label {
 .im_submit,
 .im_submit:active,
 .im_submit:hover {
-  background: url(../img/icons/IconsetW.png) 2px -860px no-repeat;
-  background-size: 42px 1171px;
   color: transparent;
   box-shadow: none;
+  background-color: inherit;
+  background-image: url(../img/icons/IconsetW.png);
+  background-repeat: no-repeat;
+  background-position: 2px -860px;
 }
-.is_1x .im_submit {
-  background-image: url(../img/icons/IconsetW_1x.png);
+.is_2x .im_submit,
+.is_2x .im_submit:active,
+.is_2x .im_submit:hover {
+  background-image: url(../img/icons/IconsetW_2x.png);
+  background-size: 42px 1171px;
 }
 .icon-paperclip {
   display: inline-block;
   width: 19px;
   height: 23px;
   vertical-align: text-top;
-  background: url(../img/icons/IconsetW.png) -12px -68px no-repeat;
-  background-size: 42px 1171px;
   opacity: 0.8;
+  background-image: url(../img/icons/IconsetW.png);
+  background-repeat: no-repeat;
+  background-position: -12px -68px;
 }
-.is_1x .icon-paperclip {
-  background-image: url(../img/icons/IconsetW_1x.png);
+.is_2x .icon-paperclip {
+  background-image: url(../img/icons/IconsetW_2x.png);
+  background-size: 42px 1171px;
 }
 .im_attach {
   cursor: pointer;
@@ -1044,11 +1054,13 @@ a.mobile_modal_action .tg_checkbox_label {
   vertical-align: text-top;
   opacity: 1;
   margin: 0;
-  background: url(../img/icons/IconsetW.png) -10px -771px no-repeat;
-  background-size: 42px 1171px;
+  background-image: url(../img/icons/IconsetW.png);
+  background-repeat: no-repeat;
+  background-position: -10px -771px;
 }
-.is_1x .icon-emoji {
-  background-image: url(../img/icons/IconsetW_1x.png);
+.is_2x .icon-emoji {
+  background-image: url(../img/icons/IconsetW_2x.png);
+  background-size: 42px 1171px;
 }
 .composer_emoji_insert_btn {
   position: absolute;
@@ -1260,16 +1272,18 @@ a.media_modal_date:hover {
   padding: 0;
 }
 .media_modal_action_btn i {
-  background: url(../img/icons/PhotoIcons.png) 0 0 no-repeat;
-  background-size: 40px 200px;
   display: block;
   opacity: 0.8;
+  background-image: url(../img/icons/PhotoIcons.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.is_2x .media_modal_action_btn i {
+  background-image: url(../img/icons/PhotoIcons_2x.png);
+  background-size: 40px 200px;
 }
 .media_modal_action_btn:active i {
   opacity: 1;
-}
-.is_1x .media_modal_action_btn i {
-  background-image: url(../img/icons/PhotoIcons_1x.png);
 }
 .media_modal_action_btn i.media_modal_action_btn_download {
   background-position: -12px -163px;

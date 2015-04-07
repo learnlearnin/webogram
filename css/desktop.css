@@ -1,3 +1,7 @@
+/* Thanks to @brandonb927
+   https://gist.github.com/brandonb927/3874012
+
+   Prepending 'only screen and ' to each media query breaks nested media queries */
 /* app desktop css */
 .tg_head_split {
   max-width: 1010px;
@@ -168,10 +172,15 @@
   height: 14px;
   margin-right: 38px;
   display: inline-block;
-  background: url(../img/icons/General.png) no-repeat -10px -111px;
-  background-size: 40px 778px;
   vertical-align: top;
   margin-top: 3px;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: -10px -111px;
+}
+.is_2x .icon-new-group {
+  background-image: url(../img/icons/General_2x.png);
+  background-size: 40px 778px;
 }
 .icon-contacts {
   width: 18px;
@@ -180,7 +189,12 @@
   margin-top: 2px;
   display: inline-block;
   vertical-align: top;
-  background: url(../img/icons/General.png) no-repeat -11px -135px;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: -11px -135px;
+}
+.is_2x .icon-contacts {
+  background-image: url(../img/icons/General_2x.png);
   background-size: 40px 778px;
 }
 .icon-settings {
@@ -190,7 +204,12 @@
   margin-top: 1px;
   display: inline-block;
   vertical-align: top;
-  background: url(../img/icons/General.png) no-repeat -10px -163px;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: -10px -163px;
+}
+.is_2x .icon-settings {
+  background-image: url(../img/icons/General_2x.png);
   background-size: 40px 778px;
 }
 .icon-faq {
@@ -200,7 +219,12 @@
   margin-top: 1px;
   display: inline-block;
   vertical-align: top;
-  background: url(../img/icons/General.png) no-repeat -10px -637px;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: -10px -637px;
+}
+.is_2x .icon-faq {
+  background-image: url(../img/icons/General_2x.png);
   background-size: 40px 778px;
 }
 .icon-about {
@@ -209,15 +233,13 @@
   margin-right: 37px;
   display: inline-block;
   vertical-align: top;
-  background: url(../img/icons/General.png) no-repeat -10px -193px;
-  background-size: 40px 778px;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: -10px -193px;
 }
-.is_1x .icon-new-group,
-.is_1x .icon-contacts,
-.is_1x .icon-settings,
-.is_1x .icon-faq,
-.is_1x .icon-about {
-  background-image: url(../img/icons/General_1x.png);
+.is_2x .icon-about {
+  background-image: url(../img/icons/General_2x.png);
+  background-size: 40px 778px;
 }
 .tg_head_connecting_text {
   color: #b9cfe3;
@@ -306,16 +328,18 @@
 .icon-filter-documents,
 .icon-filter-audio {
   display: inline-block;
-  background: url(../img/icons/General.png) no-repeat 0 0;
-  background-size: 40px 778px;
   margin-right: 12px;
   vertical-align: top;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
-.is_1x .icon-filter-photos,
-.is_1x .icon-filter-video,
-.is_1x .icon-filter-documents,
-.is_1x .icon-filter-audio {
-  background-image: url(../img/icons/General_1x.png);
+.is_2x .icon-filter-photos,
+.is_2x .icon-filter-video,
+.is_2x .icon-filter-documents,
+.is_2x .icon-filter-audio {
+  background-image: url(../img/icons/General_2x.png);
+  background-size: 40px 778px;
 }
 .icon-filter-photos {
   width: 18px;
@@ -744,11 +768,13 @@ a.footer_link.active:active {
   width: 26px;
   height: 26px;
   margin: 16px 0 0 40px;
-  background: url(../img/icons/IconsetW.png) -9px -516px no-repeat;
-  background-size: 42px 1171px;
+  background-image: url(../img/icons/IconsetW.png);
+  background-repeat: no-repeat;
+  background-position: -9px -516px;
 }
-.is_1x .icon-select-tick {
-  background-image: url(../img/icons/IconsetW_1x.png);
+.is_2x .icon-select-tick {
+  background-image: url(../img/icons/IconsetW_2x.png);
+  background-size: 42px 1171px;
 }
 @media (min-width: 1024px) {
   .im_content_message_select_area {
@@ -823,23 +849,29 @@ a.footer_link.active:active {
     display: inline-block;
     width: 16px;
     height: 10px;
-    background: url(../img/icons/Checks2_2x.png);
-    background-size: 16px 10px;
     top: 2px;
     position: relative;
+    background-image: url(../img/icons/Checks2.png);
+    background-repeat: no-repeat;
+    background-size: 16px 10px;
+    background-position: 0 0;
   }
-  .is_1x .im_message_out .icon-message-status-tick {
-    background-image: url(../img/icons/Checks2_1x.png);
+  .is_2x .im_message_out .icon-message-status-tick {
+    background-image: url(../img/icons/Checks2_2x.png);
+    background-size: 16px 10px;
   }
   .im_message_pending .icon-message-status-tick {
     display: none;
   }
   .im_message_unread .icon-message-status-tick {
-    background: url(../img/icons/Checks1_2x.png);
+    background-image: url(../img/icons/Checks1.png);
+    background-repeat: no-repeat;
     background-size: 16px 10px;
+    background-position: 0 0;
   }
-  .is_1x .im_message_unread .icon-message-status-tick {
-    background-image: url(../img/icons/Checks1_1x.png);
+  .is_2x .im_message_unread .icon-message-status-tick {
+    background-image: url(../img/icons/Checks1_2x.png);
+    background-size: 16px 10px;
   }
   .im_message_date {
     padding: 0;
@@ -902,30 +934,6 @@ a.im_panel_peer_photo .peer_initials {
   margin-top: -12px;
   margin-left: 36px;
 }
-/*.composer_emoji_insert_btn {
-  display: block;
-  position: absolute;
-  right: 3px;
-  top: 2px;
-  cursor: pointer;
-  padding: 0;
-
-  width: 22px;
-  height: 22px;
-  margin-top: 1px;
-}*/
-/*.icon-emoji {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  vertical-align: top;
-  background: url(../img/icons/General.png) no-repeat -9px -335px;
-  background-size: 40px 778px;
-  opacity: 0.8;
-}*/
-.is_1x .icon-emoji {
-  background-image: url(../img/icons/General_1x.png);
-}
 .composer_emoji_insert_btn:hover .icon-emoji {
   opacity: 1;
 }
@@ -963,13 +971,15 @@ a.im_panel_peer_photo .peer_initials {
   width: 18px;
   height: 17px;
   vertical-align: top;
-  background: url(../img/icons/General.png) no-repeat -11px -455px;
-  background-size: 40px 778px;
   opacity: 0.8;
   margin: 0;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: -11px -455px;
 }
-.is_1x .icon-paperclip {
-  background-image: url(../img/icons/General_1x.png);
+.is_2x .icon-paperclip {
+  background-image: url(../img/icons/General_2x.png);
+  background-size: 40px 778px;
 }
 .im_attach {
   cursor: pointer;
@@ -1004,12 +1014,14 @@ a.im_panel_peer_photo .peer_initials {
   width: 20px;
   height: 18px;
   vertical-align: top;
-  background: url(../img/icons/General.png) no-repeat -10px -399px;
-  background-size: 40px 778px;
   opacity: 0.8;
+  background-image: url(../img/icons/General.png);
+  background-repeat: no-repeat;
+  background-position: -10px -399px;
 }
-.is_1x .icon-camera {
-  background-image: url(../img/icons/General_1x.png);
+.is_2x .icon-camera {
+  background-image: url(../img/icons/General_2x.png);
+  background-size: 40px 778px;
 }
 .im_media_attach:hover .icon-camera {
   opacity: 1;
@@ -1089,7 +1101,7 @@ a.im_panel_peer_photo .peer_initials {
   }
   .im_media_attach {
     position: absolute;
-    top: -7px;
+    top: -6px;
     left: -43px;
     width: 19px;
     height: 24px;
@@ -1099,12 +1111,15 @@ a.im_panel_peer_photo .peer_initials {
     width: 19px;
     height: 23px;
     vertical-align: text-top;
-    background: url(../img/icons/IconsetW.png) -12px -68px no-repeat;
-    background-size: 42px 1171px;
     opacity: 0.8;
+    margin-top: -1px;
+    background-image: url(../img/icons/IconsetW.png);
+    background-repeat: no-repeat;
+    background-position: -12px -68px;
   }
-  .is_1x .icon-camera {
-    background-image: url(../img/icons/IconsetW_1x.png);
+  .is_2x .icon-camera {
+    background-image: url(../img/icons/IconsetW_2x.png);
+    background-size: 42px 1171px;
   }
   .im_media_attach:hover .icon-camera,
   .im_media_attach:active .icon-camera {
@@ -1127,11 +1142,13 @@ a.im_panel_peer_photo .peer_initials {
     vertical-align: text-top;
     opacity: 1;
     margin: 0;
-    background: url(../img/icons/IconsetW.png) -10px -771px no-repeat;
-    background-size: 42px 1171px;
+    background-image: url(../img/icons/IconsetW.png);
+    background-repeat: no-repeat;
+    background-position: -10px -771px;
   }
-  .is_1x .icon-emoji {
-    background-image: url(../img/icons/IconsetW_1x.png);
+  .is_2x .icon-emoji {
+    background-image: url(../img/icons/IconsetW_2x.png);
+    background-size: 42px 1171px;
   }
   .composer_emoji_insert_btn:active .icon-emoji,
   .is_1x .composer_emoji_insert_btn:active .icon-emoji,
@@ -1144,6 +1161,10 @@ a.im_panel_peer_photo .peer_initials {
   }
   .im_edit_panel_border {
     margin-bottom: 7px;
+  }
+  .im_send_dropbox_wrap {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 /* Peer modals */
@@ -1582,8 +1603,6 @@ div.im_dialog_photo .peer_initials {
   padding-bottom: 15px;
 }
 .modal_close {
-  background: url(../img/icons/PhotoIcons.png) -10px -10px no-repeat;
-  background-size: 40px 200px;
   width: 20px;
   height: 21px;
   float: right;
@@ -1594,6 +1613,13 @@ div.im_dialog_photo .peer_initials {
   -moz-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
+  background-image: url(../img/icons/PhotoIcons.png);
+  background-repeat: no-repeat;
+  background-position: -10px -10px;
+}
+.is_2x .modal_close {
+  background-image: url(../img/icons/PhotoIcons_2x.png);
+  background-size: 40px 200px;
 }
 .modal_close_wrap {
   display: none;
@@ -1626,8 +1652,6 @@ div.im_dialog_photo .peer_initials {
 }
 .modal_prev,
 .modal_next {
-  background: url(../img/icons/PhotoIcons.png) -12px -41px no-repeat;
-  background-size: 40px 200px;
   width: 16px;
   height: 24px;
   opacity: 0.15;
@@ -1639,6 +1663,14 @@ div.im_dialog_photo .peer_initials {
   -moz-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
+  background-image: url(../img/icons/PhotoIcons.png);
+  background-repeat: no-repeat;
+  background-position: -12px -41px;
+}
+.is_2x .modal_prev,
+.is_2x .modal_next {
+  background-image: url(../img/icons/PhotoIcons_2x.png);
+  background-size: 40px 200px;
 }
 .modal_next {
   margin: 0 0 0 50px;
@@ -1667,11 +1699,6 @@ div.im_dialog_photo .peer_initials {
 }
 .modal_next_active_wrap:hover .modal_next {
   opacity: 1;
-}
-.is_1x .modal_close,
-.is_1x .modal_prev,
-.is_1x .modal_next {
-  background-image: url(../img/icons/PhotoIcons_1x.png);
 }
 @media (min-width: 800px) {
   .modal_close_wrap,
@@ -1768,13 +1795,15 @@ div.media_modal_date {
   background: rgba(0, 0, 0, 0.2);
 }
 .media_modal_action_btn i {
-  background: url(../img/icons/PhotoIcons.png) 0 0 no-repeat;
-  background-size: 40px 200px;
   display: block;
   opacity: 0.5;
+  background-image: url(../img/icons/PhotoIcons.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
-.is_1x .media_modal_action_btn i {
-  background-image: url(../img/icons/PhotoIcons_1x.png);
+.is_2x .media_modal_action_btn i {
+  background-image: url(../img/icons/PhotoIcons_2x.png);
+  background-size: 40px 200px;
 }
 .media_modal_action_btn:hover i {
   opacity: 1;
