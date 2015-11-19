@@ -1634,7 +1634,7 @@ a.composer_command_option.composer_autocomplete_option_active .composer_command_
 .error_modal_description{color:#999;padding:5px 0;font-size:13px;line-height:160%}
 .error_modal_details textarea{display:block;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:10px;line-height:100%;white-space:pre-wrap;padding:4px;margin:10px 0;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;width:100%;text-align:left}
 .error_modal_details_link,.error_modal_details_link:hover{font-size:11px;color:#999}
-.confirm_modal_description{text-align:center;padding:20px 0;font-size:14px;line-height:160%}
+.confirm_modal_description{text-align:center;padding:20px 0;font-size:14px;line-height:160%;word-break:break-all}
 .confirm_phone_number{font-weight:700;padding:15px 10px 0;text-align:center}
 .document_modal_window,.photo_modal_window,.video_modal_window{display:block}
 .photo_modal_error{color:#999;position:absolute;width:100%;top:50%;margin-top:-20px;padding:0 20px;text-align:center;font-size:1.4em;line-height:160%}
