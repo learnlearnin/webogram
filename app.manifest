@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Time: Thu Apr 16 2015 18:48:38 GMT+0530 (IST)
+# Time: Fri Nov 20 2015 01:51:14 GMT+0530 (IST)
 
 
 CACHE:
@@ -8,6 +8,8 @@ favicon_unread.ico
 css/app.css
 css/desktop.css
 css/mobile.css
+img/Manytabs.png
+img/Manytabs_2x.png
 img/Telegram.png
 img/Telegram72.png
 img/Telegram72_2x.png
@@ -28,16 +30,14 @@ nacl/mtproto_crypto.pexe
 img/changelog/card_wecandoit.png
 img/icons/AboutLogos.png
 img/icons/AboutLogos_2x.png
-img/icons/Checks1.png
-img/icons/Checks1_2x.png
-img/icons/Checks2.png
-img/icons/Checks2_2x.png
 img/icons/General.png
 img/icons/General_2x.png
 img/icons/IconsetSmiles.png
 img/icons/IconsetSmiles_2x.png
 img/icons/IconsetW.png
 img/icons/IconsetW_2x.png
+img/icons/Major.png
+img/icons/Major_2x.png
 img/icons/MobileIcons.png
 img/icons/MobileIcons_2x.png
 img/icons/PhotoIcons.png
@@ -65,7 +65,6 @@ js/lib/bin_utils.js
 js/lib/crypto_worker.js
 js/lib/polyfill.js
 js/locales/de-de.json
-js/locales/en-pi.json
 js/locales/en-us.json
 js/locales/es-es.json
 js/locales/it-it.json
@@ -78,7 +77,6 @@ vendor/jsbn/jsbn_combined.js
 vendor/leemon_bigint/bigint.js
 vendor/rusha/rusha.js
 vendor/angular/i18n/angular-locale_de-de.js
-vendor/angular/i18n/angular-locale_en-pi.js
 vendor/angular/i18n/angular-locale_en-us.js
 vendor/angular/i18n/angular-locale_es-es.js
 vendor/angular/i18n/angular-locale_it-it.js
