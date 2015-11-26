@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Time: Fri Nov 20 2015 01:52:50 GMT+0530 (IST)
+# Time: Thu Nov 26 2015 09:50:11 GMT+0530 (IST)
 
 
 CACHE:
@@ -65,6 +65,7 @@ js/lib/bin_utils.js
 js/lib/crypto_worker.js
 js/lib/polyfill.js
 js/locales/de-de.json
+js/locales/en-pi.json
 js/locales/en-us.json
 js/locales/es-es.json
 js/locales/it-it.json
@@ -77,6 +78,7 @@ vendor/jsbn/jsbn_combined.js
 vendor/leemon_bigint/bigint.js
 vendor/rusha/rusha.js
 vendor/angular/i18n/angular-locale_de-de.js
+vendor/angular/i18n/angular-locale_en-pi.js
 vendor/angular/i18n/angular-locale_en-us.js
 vendor/angular/i18n/angular-locale_es-es.js
 vendor/angular/i18n/angular-locale_it-it.js
